@@ -1,0 +1,18 @@
+﻿@model Bestelling
+@{
+    ViewData["Title"] = "Bestellen";
+}
+<div class="lead">
+    <form asp-action="Toevoegen" method="post">
+        <h5>1. Kies de pasta</h5>
+        <select asp-for="Pastasoort" asp-items="@new SelectList(Enum.GetNames(typeof(Pastasoort)))"></select>
+        <h5>2. Kies de grootte</h5>
+        <select asp-for="Grootte" asp-items="@new SelectList(Enum.GetNames(typeof(Grootte)))"></select>
+        <h5>3. Kies de saus</h5>
+        <select asp-for="Saus" asp-items="@new SelectList(Enum.GetNames(typeof(Saus)))"></select>
+        <p>
+            <input type="submit" class="btn btn-success btn-lg" value="Voeg bestelling toe" />
+        </p>
+    </form>
+</div>
+

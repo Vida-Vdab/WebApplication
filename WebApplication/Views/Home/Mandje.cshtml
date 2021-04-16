@@ -1,0 +1,26 @@
+﻿
+<h2>Overzicht bestellingen</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Pastasoort</th>
+            <th>Grootte</th>
+            <th>Saus</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var bestelling in ViewBag.bestellingen)
+        {
+            <tr>
+                <td>@bestelling.Pastasoort</td>
+                <td>@bestelling.Grootte</td>
+                <td>@bestelling.Saus</td>
+            </tr>
+          }
+    </tbody>
+</table>
+<p>
+    <a asp-action="ToonBoodschap" class="btn btn-success btn-lg">Bestelling(en) doorsturen</a>
+</p>
+
+

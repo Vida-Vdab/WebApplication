@@ -1,0 +1,26 @@
+﻿@model Persoon
+@{
+    ViewData["Title"] = "Nieuwsbrief";
+}
+
+<h2>Schrijf hier in voor onze nieuwsbrief</h2>
+<form asp-action="Inschrijven" method="post">
+    <label asp-for="Naam"></label>
+    <span asp-validation-for="Naam"></span>
+    <input asp-for="Naam" />
+    <label asp-for="Voornaam"></label>
+    <span asp-validation-for="Voornaam"></span>
+    <input asp-for="Voornaam" />
+    <label asp-for="Email"></label>
+    <span asp-validation-for="Email"></span>
+    <input asp-for="Email" />
+    <label asp-for="Telefoon"></label>
+    <span asp-validation-for="Telefoon"></span>
+    <input asp-for="Telefoon" />
+    <label asp-for="Geboortedatum"></label>
+    <span asp-validation-for="Geboortedatum"></span>
+    <input asp-for="Geboortedatum" />
+    <input type="submit" value="Inschrijven" class="btn btn-success btn-lg" />
+    <div asp-validation-summary="All">Er zijn validatiefouten:</div>
+</form>
+
